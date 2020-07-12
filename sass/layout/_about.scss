@@ -1,0 +1,89 @@
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background: $light-gray;
+
+    @media (min-width: $screen-md-min) {
+        padding: 40px;
+    }
+
+    @media (min-width: $screen-xl-min) {
+        padding: 100px;
+        // height: 80vh;
+    }
+
+    & .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../img/mountains_big.jpg);
+        background-attachment: fixed;
+        background-position: 50% 30%;
+        opacity: 0.25;
+    }
+
+    & .content {
+        position: relative;
+        color: $white;
+
+
+        & p {
+            line-height: 1.5;
+            letter-spacing: 1px;
+            padding-bottom: 20px;
+
+            @media (min-width: $screen-md-min) {
+                font-size: 18px;
+                padding-bottom: 30px;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                padding: 30px 150px;
+            }
+        }
+
+
+
+        // & .profile {
+        //     background: url('../img/profile.png') center;
+        //     background-size: cover;
+        //     height: 180px;
+        //     width: 180px;
+        //     border-radius: 50%;
+        // }
+
+        & .socials-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+
+            @media (min-width: $screen-md-min) {
+                padding: 30px;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                padding: 50px 300px;
+            }
+
+            & .social img {
+                height: 54px;
+                width: 54px;
+
+                @media (min-width: $screen-md-min) {
+                    height: 63px;
+                    width: 63px;
+                }
+
+                @media (min-width: $screen-lg-min) {
+                    height: 72px;
+                    width: 72px;
+                }
+            }
+        }
+    }
+}

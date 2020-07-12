@@ -1,0 +1,53 @@
+.skills {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    background: $medium-blue;
+
+    @media (min-width: $screen-md-min) {
+        padding: 40px;
+    }
+
+    @media (min-width: $screen-xl-min) {
+        padding: 100px;
+    }
+
+    & .skills-container {
+        position: relative;
+        padding: 5px 15px;
+
+        @media (min-width: $screen-md-min) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: $screen-xl-min) {
+            padding: 10px 30px;
+        }
+
+        & .skill {
+            height: 30px;
+            margin-bottom: 3px;
+            background: rgba(255,255,255, 0.5);
+            // opacity: 0.25;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+
+            @media (min-width: $screen-md-min) {
+                flex-basis: 49%;
+                height: 40px;
+                margin: 2px;
+                line-height: 40px;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                font-size: 20px;
+                margin: 3px;
+                height: 50px;
+                line-height: 50px;
+            }
+            
+        }
+    }
+}

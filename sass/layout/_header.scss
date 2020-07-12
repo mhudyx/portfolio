@@ -1,0 +1,182 @@
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: $light-blue;
+    padding: 20px;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.25;
+    }
+
+    & .toolbar {
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & .logo {
+            color: $white;
+            font-family: 'Yatra One', cursive;
+            font-size: 28px;
+            letter-spacing: 1.2px;
+
+            @media (min-width: $screen-xl-min) {
+                font-size: 32px;
+                margin-left: 20px;
+            }
+        }
+
+        .burger {
+            position: absolute;
+            height: 30px;
+            width: 40px;
+            top: 8px;
+            right: 20px;
+            background: url(../img/toggle.png);
+            background-size: cover;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                top: -100px;
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+    
+        nav {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            top: calc(-4*  18vh);
+            color: #eee;
+            transition: 1s;
+            z-index: 1;
+
+            @media (min-width: $screen-xl-min) {
+                position: relative;
+                top: 0;
+                flex-basis: 40%;
+                display: flex;
+                justify-content: space-around;
+
+                & a {
+                    flex-basis: 23%;
+                    flex-grow: 0;
+                    margin-bottom: 2px;
+
+                    &:hover {
+                        // border-bottom: 2px solid black;
+                        color: $white;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            & div {
+                height: 15vh;
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                line-height: 15vh;
+
+                @media (min-width: $screen-sm-min) {
+                    height: 18vh;
+                    font-size: 22px;
+                }
+
+                @media (min-width: $screen-md-min) {
+                    height: 12vh;
+                    line-height: 12vh;
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding-bottom: 30px;
+                    border-bottom: 3px solid rgba(255,255,255,0);
+                    transition: .3s color ease-in-out, .2s border ease-in-out;
+
+                    &:hover {
+                        border-bottom: solid white;
+                    }
+                }
+                
+            }
+        }
+
+        .show {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: black;
+        }
+    }
+
+    & .content {
+        position: relative;
+        top: calc(50% - 112px);
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+
+        @media (min-width: $screen-md-min) {
+            font-size: 26px;
+        }
+
+    }
+
+    .arrow {
+        opacity: 0;
+        z-index: -1;
+        transition: .3s ease-in-out;
+
+        @media (min-width: $screen-xl-min) {
+            display: block;
+            position: absolute;
+            z-index:1;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            opacity: 1;
+            left: calc(50% - 25px);
+            background:#fff;
+            color: $medium-blue;
+            text-align: center;
+            bottom: 10%;
+            border: none;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        & i {
+            text-shadow: 0px -20px 0 $medium-blue, 0 -40px 0 $medium-blue;
+            transform: translateY(-50px);
+            animation: arrow 2s linear infinite;
+        }
+
+        @keyframes arrow {
+            50% {
+                transform: translateY(92px);
+            }
+            100% {
+                transform: translateY(92px);
+              }
+        }
+    }
+    
+}

@@ -1,0 +1,87 @@
+.contact {
+    position: relative;
+    padding: 20px;
+    background: $white;
+
+    @media (min-width: $screen-md-min) {
+        padding: 40px;
+    }
+
+    .heading {
+        color: black;
+    }
+
+    & p {
+        line-height: 1.5;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media (min-width: $screen-md-min) {
+            font-size: 18px;
+        }
+    }
+
+    & .socials-container {
+
+        @media (min-width: $screen-sm-min) {
+            width: 50%;
+            margin: 0 auto;
+         }
+
+
+        @media (min-width: $screen-md-min) {
+           width: 70%;
+           display: flex;
+           flex-wrap: wrap;
+           padding: 20px 0;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            width: 100%;
+         }
+    }
+
+    & .social {
+        height: 72px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 15px;
+
+        @media (min-width: $screen-md-min) {
+            flex-basis: 50%;
+            margin-bottom: 30px;
+         }
+
+        @media (min-width: $screen-md-min) {
+            padding: 0 60px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        @media (min-width: $screen-xl-min) {
+            justify-content: center;
+        }
+
+        & img {
+            width: 72px;
+            height: 72px;
+        }
+
+        & p {
+            flex-basis: 200px;
+            font-size: 20px;
+            align-self: center;
+            margin-bottom: 0;
+            text-align: left;
+
+            @media (min-width: $screen-md-min) {
+                font-size: 24px;
+                flex-basis: 220px;
+                margin-left: 20px;
+             }
+        }
+    }
+
+}
