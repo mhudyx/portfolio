@@ -24,5 +24,17 @@
                 object-fit: contain;
             }
         }
+
+        @media (min-width: $screen-lg-min) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            & a {
+                flex-basis: 48%;
+                padding: 0 1%;
+            }
+        }
+
     }
 }
